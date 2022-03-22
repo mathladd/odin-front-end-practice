@@ -48,30 +48,39 @@ div {
     color: #00FF;
 }
 
-/* everything below here is formatting the second div */
-.gibberish {
+/*chain-select all elements with the class "exclamation-marks" and the id "exclamation"*/
+.exclamation-marks#exclamation {
+    color: red;
+}
+
+/*-------------everything below here is formatting the second div-----------*/
+.stuff {
     background-color: blanchedalmond;
     text-align: center;
     padding: 20px 30px 20px 30px;
 }
 
-/* select the "gibberish-paragraph" class inside the div with class "gibberish" */
-.gibberish .gibberish-paragraph {
+/*select all elements with the "gibberish-paragraph" class inside an element with class "stuff." 
+*note: ".stuff .gibberish-paragraph" =/= ".stuff.gibberish-paragraph" 
+    -> the former selects all elements with class "gibberish-paragraph" INSIDE ANOTHER element with class "stuff"
+    -> the latter selects all elements HAVING BOTH class "stuff" and "gibberish-paragraph"
+*/
+.stuff .gibberish-paragraph {
     color: purple;
 }
 
-/* select only the "p"s inside the div with class "gibberish." this will not override the above due to the css score system:
+/* select only the "p"s inside the element with class "stuff." this will not override the above due to the css score system:
     elements and pseudo elements:               1 point
     classes, attributes and pseudo-classes:     10 points
     ids:                                        100 points
     inline (in html) styling:                   1000 points
 
-    =>  A: .gibberish .gibberish-paragraph  = 10 + 10 = 20
-        B: .gibberish p                     = 10 + 1  = 11
+    =>  A: .stuff .gibberish-paragraph  = 10 + 10 = 20
+        B: .stuff p                     = 10 + 1  = 11
 
-    => A > B, thus A is prioritized even though B comes later in the code
+    A > B => A is prioritized even though B comes later in the css code
 */
-.gibberish p {
+.stuff p {
     color: yellow;
 }
 
@@ -125,7 +134,7 @@ img {
 }
 
 
-/* all codes below will be for formatting lists */
+/*-------------everything below will be for formatting lists---------------*/
 ol {
     background-color: black;
     list-style-type: upper-alpha;  /* A, B, C bullets instead of 1, 2, 3 */
@@ -149,10 +158,9 @@ ul li {
 
 
 
-/* all codes below will work with boxes, colors, and float 
+/*-------------everything below will work with boxes, colors, and float ------*/
 
-float: when a box/image/element floats, all elements go below it except texts (e.g. a div may go below the element but not the div's text). if all elements float, they line up on a same row (since floating items cannot go above or below each other anymore). When an element has "clear: both", it will create a new row that forces all floating items specified after that element to float below that row
-*/
+/* float: when a box/image/element floats, all elements go below it except texts (e.g. a div may go below the element but not the div's text). if all elements float, they line up on a same row (since floating items cannot go above or below each other anymore). When an element has "clear: both", it will create a new row that forces all floating items specified after that element to float below that row */
 .box-wrapper {
     background-image: url(../img/hamster.jpg);
     background-size: cover;

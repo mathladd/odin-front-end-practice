@@ -1,7 +1,8 @@
 body {
     background-color: #000;
     color: #FFF;
-    font-size: 21px;
+    font-size: 1.5rem;  /*use rems for font-size, pixels for borders, and ems for most other properties.*/
+
     /* Inheritance: certain CSS properties when applied to an element are inherited by that element’s descendants. Typography based properties (color, font-size, font-family, etc.) are usually inherited, while most other properties aren’t. Inherited properties will be overrode by child's properties REGARDLESS of specificity 
         => some properties in "body" will be inherited by its childs- which will be most elements (unless those properties are changed afterwards in the child's CSS, since those changes will trump the changes in "body" EVEN IF "body" has more specificity)
     */
@@ -115,7 +116,7 @@ a:hover {       /* this is when you hover on a link */
 
 a:active {      /* this is when you click on the link */
     color: purple;
-    font-size: 30px;
+    font-size: 2rem;
 }
 
 a:focus {       /* this is for when some people may use Tab to navigate the website */
@@ -127,7 +128,7 @@ a:focus {       /* this is for when some people may use Tab to navigate the webs
 }
 
 #link-to-page-2 {
-    font-size: 25px;
+    font-size: 1.7rem;
 }
 
 /* texts will wrap around the image instead. See more about float in class .box's css definition below */

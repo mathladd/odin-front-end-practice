@@ -2,8 +2,8 @@ body {
     background-color: #000;
     color: #FFF;
     font-size: 21px;
-    /* Inheritance: certain CSS properties when applied to an element are inherited by that element’s descendants. Typography based properties (color, font-size, font-family, etc.) are usually inherited, while most other properties aren’t
-        => some properties in "body" will be inherited by its childs- which will be most elements (unless those properties are changed afterwards in the child's CSS, since those changes will have more specificity than the changes in "body")
+    /* Inheritance: certain CSS properties when applied to an element are inherited by that element’s descendants. Typography based properties (color, font-size, font-family, etc.) are usually inherited, while most other properties aren’t. Inherited properties will be overrode by child's properties REGARDLESS of specificity 
+        => some properties in "body" will be inherited by its childs- which will be most elements (unless those properties are changed afterwards in the child's CSS, since those changes will trump the changes in "body" EVEN IF "body" has more specificity)
     */
 }
 

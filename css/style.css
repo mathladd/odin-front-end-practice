@@ -60,10 +60,10 @@ div {
     padding: 20px 30px 20px 30px;
 }
 
-/*select all elements with the "gibberish-paragraph" class inside an element with class "stuff." 
+/*select all elements with the "gibberish-paragraph" class inside an ancestor element having the class "stuff." 
 *note: ".stuff .gibberish-paragraph" =/= ".stuff.gibberish-paragraph" 
-    -> the former selects all elements with class "gibberish-paragraph" INSIDE ANOTHER element with class "stuff"
-    -> the latter selects all elements HAVING BOTH class "stuff" and "gibberish-paragraph"
+    -> the former selects all CHILD elements with class "gibberish-paragraph" inside an ANCESTOR element with class "stuff" (a descendant combinator)
+    -> the latter selects all elements HAVING BOTH class "stuff" and "gibberish-paragraph" (a chaining selector)
 */
 .stuff .gibberish-paragraph {
     color: purple;

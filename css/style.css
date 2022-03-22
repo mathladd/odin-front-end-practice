@@ -43,7 +43,7 @@ div {
 }
 
 
-/* applying to an id */
+/* applying to an id. An id can only be applied to 1 ELEMENT. Use id sparingly (if at all even. Classes is enough for the majority of cases) */
 #exclamation {
     color: #00FF;
 }

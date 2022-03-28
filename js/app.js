@@ -218,8 +218,8 @@ window.addEventListener("keypress", (e) => {
 let help = document.querySelector("#help");
 let inputFields = document.querySelectorAll("input");
 for (let field of Array.from(inputFields)) {
-    field.addEventListener("focus", () => {
-        let text = this.getAttribute("data-help");
+    field.addEventListener("focus", (e) => {
+        let text = e.target.getAttribute("data-help");
         // let text = e.target.getAttribute("data-help");  // this is fine too
         help.textContent = text;
     });
